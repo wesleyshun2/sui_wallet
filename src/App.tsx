@@ -1,4 +1,3 @@
-import React from 'react';
 import { ConnectButton, useCurrentAccount } from '@mysten/dapp-kit';
 import './App.css';
 
