@@ -4,10 +4,10 @@ import './App.css';
 function App() {
     return (
         <div className="App">
-            <header className="App-header">
+            <div className="connect-button-container">
                 <ConnectButton />
-            </header>
-
+            </div>
+            <header className="App-header"></header>
             <ConnectedAccount />
         </div>
     );
