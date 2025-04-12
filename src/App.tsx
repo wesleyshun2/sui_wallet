@@ -13,14 +13,13 @@ function App() {
     );
 }
 
-function ConnectedAccount() {
+//檢查是否有連接的帳戶
+function ConnectedAccount() { 
     const account = useCurrentAccount();
-
     if (!account) {
-        return null;
+        return <div>Connected to check history or upload</div>;
     }
-
-    return <div>Connected to {account.address}</div>;
+    return null;
 }
 
 export default App;
