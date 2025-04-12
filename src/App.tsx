@@ -3,6 +3,13 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+// part 1 import
+import { ConnectButton } from '@mysten/dapp-kit';
+
+// part 2 import
+import { ConnectButton, useCurrentAccount } from '@mysten/dapp-kit';
+
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -33,3 +40,38 @@ function App() {
 }
 
 export default App
+
+
+// part 1 使用所有设置好的 Providers
+function App() {
+    return (
+        <div className="App">
+            <header className="App-header">
+                <ConnectButton />
+            </header>
+        </div>
+    );
+}
+
+// part 2 现在你已经让用户连接他们的钱包
+function App() {
+    return (
+        <div className="App">
+            <header className="App-header">
+                <ConnectButton />
+            </header>
+
+            <ConnectedAccount />
+        </div>
+    );
+}
+
+function ConnectedAccount() {
+    const account = useCurrentAccount();
+
+    if (!account) {
+        return null;
+    }
+
+    return <div>Connected to {account.address}</div>;
+}
