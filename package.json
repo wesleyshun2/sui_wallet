@@ -1,31 +1,32 @@
 {
-  "name": "sui_wallet_website",
-  "version": "1.0.0",
-  "description": "A simple website to connect to the Sui wallet using the Sui SDK.",
-  "main": "src/app.js",
+  "name": "sui_wallet",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "start": "webpack serve --mode development",
-    "build": "webpack --mode production"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@sui/sdk": "^1.0.0"
+    "@mysten/dapp-kit": "^0.15.3",
+    "@mysten/sui": "^1.27.0",
+    "@tanstack/react-query": "^5.72.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "webpack": "^5.0.0",
-    "webpack-cli": "^4.0.0",
-    "webpack-dev-server": "^3.0.0",
-    "babel-loader": "^8.0.0",
-    "babel-core": "^7.0.0",
-    "babel-preset-env": "^1.0.0",
-    "css-loader": "^5.0.0",
-    "style-loader": "^2.0.0"
-  },
-  "keywords": [
-    "sui",
-    "wallet",
-    "sdk",
-    "web"
-  ],
-  "author": "Your Name",
-  "license": "MIT"
+    "@eslint/js": "^9.21.0",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.21.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^15.15.0",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.24.1",
+    "vite": "^6.2.0"
+  }
 }
