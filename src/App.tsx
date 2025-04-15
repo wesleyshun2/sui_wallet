@@ -17,7 +17,7 @@ function App() {
 function ConnectedAccount() { 
     const account = useCurrentAccount();
     if (!account) {
-        return <div>Connected to check history or upload</div>;
+        return <div>Not Connected</div>;
     }
     return null;
 }
